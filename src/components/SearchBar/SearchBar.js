@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './SearchBar.css';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -18,11 +19,29 @@ class SearchBar extends Component {
     }
 
     render() {
+        const id='searchBar';
+        const label = 'Search on wiki'
+
         return (
-            <form onSubmit={event => this.onSubmitHandler(event)}>
-                <input value={this.state.value} onChange={event => this.onChangeHandler(event)}/>
-                <button type="submit">Submit</button>
-            </form>
+            <div className={'search-bar'}>
+                <form onSubmit={event => this.onSubmitHandler(event)}>
+                    <label 
+                        htmlFor={id}
+                        className={'visually-hidden'}
+                    >
+                        {label}
+                    </label>
+                    <button type="submit">
+                        <span className={'material-icons'}>search</span>
+                    </button>
+                    <input 
+                        id={id}
+                        value={this.state.value}
+                        placeholder={label} 
+                        onChange={event => this.onChangeHandler(event)}
+                    />
+                </form>
+            </div>
         );
     }
 }

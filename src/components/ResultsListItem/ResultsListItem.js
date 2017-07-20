@@ -1,13 +1,14 @@
 import React from 'react';
+import './ResultsListItem.css';
 
 const ResultsListItem = props => {
     return (
-        <li>
-            <a href={props.link}>
+        <a className={'link'} href={props.link}>
+            <li className={'results-list-item'}>
                 <h2>{props.title}</h2>
-            </a>
-            <div dangerouslySetInnerHTML={{__html: props.extract}} />
-        </li>
+                <p>{props.extract}</p>
+            </li>
+        </a>
     );
 }
 
