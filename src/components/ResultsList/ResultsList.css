@@ -1,13 +1,14 @@
 .results-list {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
 
     padding: 0;
     margin: 0 auto;
 
     max-width: 80rem;
-
+    min-height: calc(100% - 4rem); 
+    
     list-style: none;
-
-    padding-top: 0.5rem;
 }
+

@@ -41,6 +41,15 @@ class SearchBar extends Component {
                         onChange={event => this.onChangeHandler(event)}
                     />
                 </form>
+                <a 
+                    href="https://en.wikipedia.org/wiki/Special:Random" 
+                    title="Get random article."
+                    className="random-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <span>?</span>
+                </a>
             </div>
         );
     }
